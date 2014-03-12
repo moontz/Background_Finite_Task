@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.bdm.Background_Finite_Task"
+        id="com.bdm.BackgroundJS"
         version="1.0.0">
 
     <name>BackgroundFiniteTask</name>
@@ -19,13 +19,13 @@
     </engines>
 
     <js-module src="www/BackgroundJS.js" name="BackgroundFiniteTask">
-        <clobbers target="plugin.BackgroundFiniteTask" />
+        <clobbers target="plugin.BackgroundJS" />
     </js-module>
 
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="BackgroundFiniteTask">
+            <feature name="BackgroundJS">
                 <param name="ios-package" value="BackgroundJS" onload="true" />
                 <param name="onload" value="true" />
             </feature>

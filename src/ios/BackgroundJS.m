@@ -12,11 +12,6 @@
 
 @synthesize backgroundSecondsCounter;
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
 - (void)pluginInitialize
 {
     backgroundSecondsCounter = 0;
