@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.bdm.Background_Finite_Task"
+        version="1.0.0">
+
+    <name>BackgroundFiniteTask</name>
+
+    <description>Background mode plugin for Cordova 3.x.x</description>
+    <repo>https://github.com/moontz/Background_Finite_Task.git</repo>
+    <keywords>background, ios</keywords>
+    <license>Apache 2.0</license>
+
+    <author>Moontz</author>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/BackgroundJS.js" name="BackgroundFiniteTask">
+        <clobbers target="plugin.BackgroundFiniteTask" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="BackgroundFiniteTask">
+                <param name="ios-package" value="BackgroundJS" onload="true" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/BackgroundJS.h" />
+        <source-file src="src/ios/BackgroundJS.m" />
+    </platform>
+</plugin>
